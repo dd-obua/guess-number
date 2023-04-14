@@ -1,5 +1,7 @@
 'use strict';
 
+let secretNumber = Math.trunc(Math.random() * 20) + 1;
+
 const checkBtn = document.querySelector('.check');
 const outputMsg = document.querySelector('.msg');
 const result = document.querySelector('.result');
@@ -9,10 +11,6 @@ const guessInput = document.querySelector('.guess');
 const scoreOuput = document.querySelector('.score');
 
 // Refactor using functions
-const generateSecretNumber = function () {
-  Math.trunc(Math.random() * 20) + 1;
-};
-
 const displayMsg = function (msg) {
   outputMsg.textContent = msg;
 };
@@ -75,5 +73,5 @@ document.querySelector('.reset').addEventListener('click', function () {
   scoreOuput.textContent = score;
   highestScore.textContent = maxScore;
 
-  generateSecretNumber();
+  secretNumber = Math.trunc(Math.random() * 20) + 1;
 });
