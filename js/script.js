@@ -2,7 +2,6 @@
 
 const secretNumber = Math.trunc(Math.random() * 20) + 1;
 
-// Hold document objects in variables
 const checkBtn = document.querySelector('.check');
 const outputMsg = document.querySelector('.msg');
 const result = document.querySelector('.result');
@@ -10,9 +9,12 @@ const highestScore = document.querySelector('.highest-score');
 const body = document.querySelector('body');
 const guessInput = document.querySelector('.guess');
 const scoreOuput = document.querySelector('.score');
-const reset = document.querySelector('.reset');
 
-// Set initial score values
+// Refactor using functions
+const displayMsg = function (msg) {
+  outputMsg.textContent = msg;
+};
+
 let score = 20;
 let maxScore = 0;
 
@@ -21,13 +23,13 @@ checkBtn.addEventListener('click', function () {
 
   // No input
   if (!guess) {
-    outputMsg.textContent = 'No number!';
+    displayMsg('No number!');
   }
 
   // Correct guess
   else if (guess === secretNumber) {
     result.textContent = guess;
-    outputMsg.textContent = 'Correct number!';
+    displayMsg('Correct number!');
     if (score > maxScore) maxScore = score;
     highestScore.textContent = maxScore;
 
@@ -42,22 +44,22 @@ checkBtn.addEventListener('click', function () {
   else if (guess !== secretNumber) {
     // Out of range
     if (guess < 1 || guess > 20) {
-      outputMsg.textContent = 'Out of range (1 to 20)';
+      displayMsg('Out of range (1 to 20)');
     }
     // Within range
     else if (score > 1) {
-      outputMsg.textContent = guess < secretNumber ? 'Too low!' : 'Too high!';
+      displayMsg(guess < secretNumber ? 'Too low!' : 'Too high!');
       score--;
       scoreOuput.textContent = score;
     } else {
-      outputMsg.textContent = 'You lost the game';
+      displayMsg('You lost the game');
       score = 0;
       scoreOuput.textContent = score;
     }
   }
 });
 
-reset.addEventListener('click', function () {
+document.querySelector('.reset').addEventListener('click', function () {
   body.style.background = '#333';
   result.style.fontSize = '60px';
   result.style.padding = '8px 36px';
