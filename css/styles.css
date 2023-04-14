@@ -88,13 +88,9 @@ body {
 }
 
 .section-scores p:first-child {
-  margin-bottom: px;
+  margin-bottom: 36px;
 }
 
 .section-scores p:not(:first-child) {
   margin-bottom: 24px;
-}
-
-.green-background {
-  background: green;
 }
