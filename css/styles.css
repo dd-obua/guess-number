@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 28px;
+  color: #eee;
+  background: #333;
+}
+
+.top-section {
+  margin: 36px 128px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn {
+  font-size: 24px;
+  background: #eee;
+  border: none;
+  padding: 12px 24px;
+  cursor: pointer;
+}
+
+.heading-1 {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.result-section {
+  margin-bottom: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.result {
+  color: #333;
+  background: #eee;
+  font-weight: bold;
+  font-size: 60px;
+  padding: 8px 36px;
+  display: inline;
+}
+
+.btm-section {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 300px;
+}
+
+.input-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.guess {
+  background: #333;
+  font-size: 48px;
+  color: #eee;
+  width: 200px;
+  padding: 16px 24px;
+  margin-bottom: 20px;
+  margin: 0 auto;
+  margin-bottom: 24px;
+  text-align: center;
+  border: 2px solid #eee;
+}
+
+.guess:active {
+  border: none;
+
+  border: 2px solid #eee;
+}
+
+.check {
+  width: 200px;
+  margin: 0 auto;
+}
+
+.section-scores p:first-child {
+  margin-bottom: px;
+}
+
+.section-scores p:not(:first-child) {
+  margin-bottom: 24px;
+}
+
+.green-background {
+  background: green;
+}
