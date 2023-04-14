@@ -51,6 +51,8 @@ document.querySelector('.reset').addEventListener('click', function () {
   document.querySelector('.result').style.fontSize = '60px';
   document.querySelector('.result').style.padding = '8px 36px';
   document.querySelector('.result').style.borderRadius = '0';
+  document.querySelector('.guess').style.background = '#333';
+
   document.querySelector('.result').textContent = '?';
   document.querySelector('.guess').value = '';
   document.querySelector('.msg').textContent = 'Start guessing ...';
