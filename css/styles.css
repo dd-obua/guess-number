@@ -10,33 +10,33 @@ html {
 }
 
 body {
-  font-size: 28px;
+  font-size: 2.8rem;
   color: #eee;
   background: #333;
 }
 
 .top-section {
-  margin: 36px 128px;
+  margin: 3.6rem 12.8rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .btn {
-  font-size: 24px;
+  font-size: 2.4rem;
   background: #eee;
   border: none;
-  padding: 12px 24px;
+  padding: 1.2rem 2.4rem;
   cursor: pointer;
 }
 
 .heading-1 {
   text-align: center;
-  margin-bottom: 24px;
+  margin-bottom: 2.4rem;
 }
 
 .result-section {
-  margin-bottom: 24px;
+  margin-bottom: 2.4rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -47,15 +47,15 @@ body {
   color: #333;
   background: #eee;
   font-weight: bold;
-  font-size: 60px;
-  padding: 8px 36px;
+  font-size: 6rem;
+  padding: 0.8rem 3.6rem;
   display: inline;
 }
 
 .btm-section {
   display: flex;
   justify-content: space-between;
-  margin: 0 300px;
+  margin: 0 30rem;
 }
 
 .input-form {
@@ -65,32 +65,32 @@ body {
 
 .guess {
   background: #333;
-  font-size: 48px;
+  font-size: 4.8rem;
   color: #eee;
-  width: 200px;
-  padding: 16px 24px;
-  margin-bottom: 20px;
+  width: 20rem;
+  padding: 1.6rem 2.4rem;
+  margin-bottom: 2rem;
   margin: 0 auto;
-  margin-bottom: 24px;
+  margin-bottom: 2.4rem;
   text-align: center;
-  border: 2px solid #eee;
+  border: 0.2rem solid #eee;
 }
 
 .guess:active {
   border: none;
 
-  border: 2px solid #eee;
+  border: 0.2rem solid #eee;
 }
 
 .check {
-  width: 200px;
+  width: 20rem;
   margin: 0 auto;
 }
 
 .section-scores p:first-child {
-  margin-bottom: 36px;
+  margin-bottom: 3.6rem;
 }
 
 .section-scores p:not(:first-child) {
-  margin-bottom: 24px;
+  margin-bottom: 2.4rem;
 }
