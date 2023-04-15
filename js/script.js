@@ -2,14 +2,16 @@
 
 let secretNumber = Math.trunc(Math.random() * 20) + 1;
 
-const checkBtn = document.querySelector('.check');
-const outputMsg = document.querySelector('.msg');
-const result = document.querySelector('.result');
-const highestScore = document.querySelector('.highest-score');
-const body = document.querySelector('body');
-const guessInput = document.querySelector('.guess');
-const scoreOuput = document.querySelector('.score');
-const reset = document.querySelector('.reset');
+const select = selector => document.querySelector(selector);
+
+const checkBtn = select('.check');
+const outputMsg = select('.msg');
+const result = select('.result');
+const highestScore = select('.highest-score');
+const body = select('body');
+const guessInput = select('.guess');
+const scoreOuput = select('.score');
+const reset = select('.reset');
 
 // Refactor using functions
 const displayMsg = function (msg) {
