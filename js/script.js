@@ -9,6 +9,7 @@ const highestScore = document.querySelector('.highest-score');
 const body = document.querySelector('body');
 const guessInput = document.querySelector('.guess');
 const scoreOuput = document.querySelector('.score');
+const reset = document.querySelector('.reset');
 
 // Refactor using functions
 const displayMsg = function (msg) {
@@ -59,7 +60,7 @@ checkBtn.addEventListener('click', function () {
   }
 });
 
-document.querySelector('.reset').addEventListener('click', function () {
+reset.addEventListener('click', function () {
   body.style.background = '#333';
   result.style.fontSize = '60px';
   result.style.padding = '8px 36px';
