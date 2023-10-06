@@ -26,21 +26,24 @@ checkElem.addEventListener('click', () => {
   const guess = Number(select('.guess').value);
 
   if (guess) {
-    if (score <= 1) {
-      showMessage('You lost the game!');
-      showScore(0);
-    } else {
-      if (guess === secretNumber) {
-        showMessage('Correct number!');
-        showSecretNumber(secretNumber);
-        bodyElem.style.background = '#60b347';
-        secretNumberElem.style.width = '30rem';
-        if (score > highScore) highScore = score;
-        highScoreElem.textContent = highScore;
+    if (guess < 1 || guess > 20) showMessage('Out of range (1-20)');
+    else {
+      if (score <= 1) {
+        showMessage('You lost the game!');
+        showScore(0);
       } else {
-        showMessage(`Too ${guess > secretNumber ? 'high' : 'low'}!`);
-        score--;
-        showScore(score);
+        if (guess === secretNumber) {
+          showMessage('Correct number!');
+          showSecretNumber(secretNumber);
+          bodyElem.style.background = '#60b347';
+          secretNumberElem.style.width = '30rem';
+          if (score > highScore) highScore = score;
+          highScoreElem.textContent = highScore;
+        } else {
+          showMessage(`Too ${guess > secretNumber ? 'high' : 'low'}!`);
+          score--;
+          showScore(score);
+        }
       }
     }
   } else showMessage('No number');
