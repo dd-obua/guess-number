@@ -11,47 +11,47 @@ const highScoreElem = select('.highscore');
 const againElem = select('.again');
 const guessElem = select('.guess');
 
-const secretNumber = Math.trunc(Math.random() * 20) + 1;
+let secretNumber = Math.trunc(Math.random() * 20) + 1;
 let score = 20;
 let highScore = 0;
 
-const updateScore = score => (scoreElem.textContent = score);
-const updateSecretNumber = num => (secretNumberElem.textContent = num);
-const updateMessage = msg => (messageElem.textContent = msg);
+const showScore = score => (scoreElem.textContent = score);
+const showSecretNumber = num => (secretNumberElem.textContent = num);
+const showMessage = msg => (messageElem.textContent = msg);
 
-updateScore(score);
-updateSecretNumber('?');
+showScore(score);
+showSecretNumber('?');
 
 checkElem.addEventListener('click', () => {
   const guess = Number(select('.guess').value);
 
   if (guess) {
     if (score <= 1) {
-      updateMessage('You lost the game!');
-      updateScore(0);
+      showMessage('You lost the game!');
+      showScore(0);
     } else {
       if (guess === secretNumber) {
-        updateMessage('Correct number!');
-        updateSecretNumber(secretNumber);
+        showMessage('Correct number!');
+        showSecretNumber(secretNumber);
         bodyElem.style.background = '#60b347';
         secretNumberElem.style.width = '30rem';
         if (score > highScore) highScore = score;
         highScoreElem.textContent = highScore;
       } else {
-        updateMessage(`Too ${guess > secretNumber ? 'high' : 'low'}!`);
+        showMessage(`Too ${guess > secretNumber ? 'high' : 'low'}!`);
         score--;
-        updateScore(score);
+        showScore(score);
       }
     }
-  } else updateMessage('No number');
+  } else showMessage('No number');
 });
 
 againElem.addEventListener('click', () => {
   score = 20;
-  updateSecretNumber('?');
-  updateMessage('Start guessing...');
+  showSecretNumber('?');
+  showMessage('Start guessing...');
   guessElem.value = '';
-  updateScore(score);
+  showScore(score);
   bodyElem.style.background = '#222';
   secretNumberElem.style.width = '15rem';
 });
